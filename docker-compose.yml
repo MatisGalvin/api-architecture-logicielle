@@ -1,4 +1,4 @@
-version: '3.5'
+name: clean_archi
 
 services:
   db:
@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
-    container_name: clean_archi_db
+    container_name: db
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
@@ -16,7 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: clean_archi_app
+    container_name: app
     ports:
       - '3000:3000'
     depends_on:
@@ -24,12 +24,12 @@ services:
     volumes:
       - .:/app
     command: "bash -c \"npm run prisma:migrate && npm run start:dev\""
-
+    network_mode: host
 
   adminer:
     image: adminer
     restart: always
-    container_name: clean_archi_adminer
+    container_name: adminer
     ports:
       - 8080:8080
 

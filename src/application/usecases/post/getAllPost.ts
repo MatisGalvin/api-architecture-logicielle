@@ -21,9 +21,6 @@ export class GetAllPost {
       return await this.prismaService.post.findMany({
         include: {
           ...userInclude,
-          comments: {
-            include: userInclude,
-          },
         },
       });
     } catch (err) {
