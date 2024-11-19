@@ -12,9 +12,9 @@ import {
 } from '@nestjs/common';
 import { PostService } from '../services/post.service';
 import { AuthGuard } from '@nestjs/passport';
-import { CreatePostDto } from '../dtos/post/CreatePostDto';
 import { Request } from 'express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { CreatePostDto } from '../dtos/post/CreatePostDto';
 import { UpdatePostDto } from '../dtos/post/UpdatePostDto';
 
 @ApiTags('Post')

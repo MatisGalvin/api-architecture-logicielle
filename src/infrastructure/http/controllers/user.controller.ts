@@ -9,14 +9,14 @@ import {
 } from '@nestjs/common';
 import { SignupDto } from '../dtos/user/SignupDto';
 import { SigninDto } from '../dtos/user/SigninDto';
-import { AuthService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { UpdateDto } from '../dtos/user/UpdateDto';
 
 @ApiTags('Auth')
 @Controller('auth')
 export class UserController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: UserService) {}
 
   @Post('signup')
   signup(@Body() signupDto: SignupDto) {
