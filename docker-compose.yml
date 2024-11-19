@@ -1,12 +1,10 @@
-version: '3.5'
-
 services:
   db:
     image: postgres
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
-    container_name: lebonmeeple_db
+    container_name: clean_archi_db
     volumes:
       - ./pgdata:/var/lib/postgresql/data
     ports:
@@ -16,9 +14,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: lebonmeeple_app
-    # environment:
-    #   - PORT=${PORT}
+    container_name: clean_archi_app
     ports:
       - '3000:3000'
     depends_on:
@@ -31,17 +27,6 @@ services:
   adminer:
     image: adminer
     restart: always
-    container_name: lebonmeeple_adminer
+    container_name: clean_archi_adminer
     ports:
       - 8080:8080
-    # depends_on:
-    #   - db
-
-  mailhog:
-    image: mailhog/mailhog
-    container_name: lebonmeeple_mailcatcher
-    logging:
-      driver: 'none'  # disable saving logs
-    ports:
-      - 1025:1025 # smtp server
-      - 8025:8025 # web ui
