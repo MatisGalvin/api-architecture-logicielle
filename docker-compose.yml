@@ -1,0 +1,47 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    container_name: lebonmeeple_db
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lebonmeeple_app
+    # environment:
+    #   - PORT=${PORT}
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    command: "bash -c \"npm run prisma:migrate && npm run start:dev\""
+
+
+  adminer:
+    image: adminer
+    restart: always
+    container_name: lebonmeeple_adminer
+    ports:
+      - 8080:8080
+    # depends_on:
+    #   - db
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: lebonmeeple_mailcatcher
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
