@@ -18,7 +18,9 @@ You can now use the front-end of lebonmeeple !
 
 ## Support
 
-Contact me at marco.dasilva@ynov.com
+Contact us at :
+- marco.dasilva@ynov.com
+- matis.galvin@ynov.com
 
 ## Stay in touch
 
