@@ -13,8 +13,8 @@ import {
 import { AuthGuard } from '@nestjs/passport';
 import { Request } from 'express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { CreatePostDto } from '../dtos/post/CreatePostDto';
-import { UpdatePostDto } from '../dtos/post/UpdatePostDto';
+import { CreatePostDto } from '../../../application/dtos/post/CreatePostDto';
+import { UpdatePostDto } from '../../../application/dtos/post/UpdatePostDto';
 import { CreatePost } from 'src/application/usecases/post/createPost';
 import { GetPost } from 'src/application/usecases/post/getPost';
 import { GetAllPost } from 'src/application/usecases/post/getAllPost';

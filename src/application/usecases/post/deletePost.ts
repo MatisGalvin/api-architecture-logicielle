@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { PrismaService } from 'src/domain/prisma.service';
+import { PrismaService } from 'src/infrastructure/database/prisma.service';
 import { Request } from 'express';
 
 const PRISMA_CLIENT_KNOWN_REQUEST_ERROR = 'PrismaClientKnownRequestError';

@@ -7,10 +7,10 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { SignupDto } from '../dtos/user/SignupDto';
-import { SigninDto } from '../dtos/user/SigninDto';
+import { SignupDto } from '../../../application/dtos/user/SignupDto';
+import { SigninDto } from '../../../application/dtos/user/SigninDto';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { UpdateDto } from '../dtos/user/UpdateDto';
+import { UpdateDto } from '../../../application/dtos/user/UpdateDto';
 import { CreateUser } from 'src/application/usecases/user/createUser';
 import { GetUser } from 'src/application/usecases/user/getUser';
 import { LoginUser } from 'src/application/usecases/user/loginUser';
