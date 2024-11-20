@@ -1,4 +1,4 @@
-version: '3.5'
+name: clean_archi
 
 services:
   db:
@@ -6,9 +6,9 @@ services:
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
-    container_name: lebonmeeple_db
+    container_name: db
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     ports:
       - '5432:5432'
 
@@ -16,9 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: lebonmeeple_app
-    # environment:
-    #   - PORT=${PORT}
+    container_name: app
     ports:
       - '3000:3000'
     depends_on:
@@ -26,22 +24,14 @@ services:
     volumes:
       - .:/app
     command: "bash -c \"npm run prisma:migrate && npm run start:dev\""
-
+    network_mode: host
 
   adminer:
     image: adminer
     restart: always
-    container_name: lebonmeeple_adminer
+    container_name: adminer
     ports:
       - 8080:8080
-    # depends_on:
-    #   - db
 
-  mailhog:
-    image: mailhog/mailhog
-    container_name: lebonmeeple_mailcatcher
-    logging:
-      driver: 'none'  # disable saving logs
-    ports:
-      - 1025:1025 # smtp server
-      - 8025:8025 # web ui
+volumes:
+  pgdata:

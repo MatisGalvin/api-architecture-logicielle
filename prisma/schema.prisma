@@ -19,7 +19,6 @@ model User {
   updateAt DateTime @updatedAt
   avatar String
   posts Post[] @relation("user_posts")
-  comments Comment[] @relation("user_comments")
 }
 
 model Post {
@@ -29,14 +28,4 @@ model Post {
   userId Int
   image String
   user User @relation("user_posts", fields: [userId], references: [userId], onUpdate: Cascade, onDelete: Cascade)
-  comments Comment[] @relation("post_comments")
-}
-
-model Comment {
-  commentId Int @id @default(autoincrement())
-  content String @db.VarChar(255)
-  postId Int
-  userId Int
-  post Post @relation("post_comments", fields: [postId], references: [postId], onUpdate: Cascade, onDelete: Cascade)
-  user User @relation("user_comments", fields: [userId], references: [userId], onUpdate: Cascade, onDelete: Cascade)
 }
