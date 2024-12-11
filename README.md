@@ -108,6 +108,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 Dans le répertoire de l'application
 ```bash
 docker compose up -d
+npm run start:dev
 ```
 
 ## Lancer les tests

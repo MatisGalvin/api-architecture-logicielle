@@ -24,7 +24,7 @@ services:
     volumes:
       - .:/app
     command: "bash -c \"npm run prisma:migrate && npm run start:dev\""
-    network_mode: host
+    
 
   adminer:
     image: adminer
