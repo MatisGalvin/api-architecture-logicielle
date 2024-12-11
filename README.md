@@ -14,37 +14,45 @@ Ces annonces sont des invitations à une entraide généralisée.
 - Documentation Swagger pour une utilisation facilitée de l'API
 
 ## Technos utilisées
+
 - Environnement back sous docker
-- Back: 
-   - API: NestJs
-   - ORM: Prisma
-   - BDD: Postgres
+- Back:
+  - API: NestJs
+  - ORM: Prisma
+  - BDD: Postgres
 - Front:
-   - UI: React
-   - Composants: Chakra UI
-   - Store: Redux Toolkit
+  - UI: React
+  - Composants: Chakra UI
+  - Store: Redux Toolkit
 
 ## Schéma de la base de données
+
 ![Schéma de la BDD](https://private-user-images.githubusercontent.com/99349443/391995462-d521f920-8591-4bb7-9dc7-9ccea912bf61.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzQ3NTEsIm5iZiI6MTczMzIzNDQ1MSwicGF0aCI6Ii85OTM0OTQ0My8zOTE5OTU0NjItZDUyMWY5MjAtODU5MS00YmI3LTlkYzctOWNjZWE5MTJiZjYxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MDA1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM3MDdiZWExOTRlYmIxMzcwODU2M2ExNDU4ZmZiMDZmMTc2NzI4MzZmOThhNGFlYzRkM2U1ZWQxMmZiMjdiNWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.ZfelZN0hzsPiYJ90TcePH5qAYZRlcIkURxGqWqUkzT4)
 
 ## Diagramme C4
 
 ### Diagramme de Contexte
+
 ![Diagramme de contexte](https://private-user-images.githubusercontent.com/99349443/391997344-c3577a6d-e939-49f2-961b-d28df93018d9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzUwNTAsIm5iZiI6MTczMzIzNDc1MCwicGF0aCI6Ii85OTM0OTQ0My8zOTE5OTczNDQtYzM1NzdhNmQtZTkzOS00OWYyLTk2MWItZDI4ZGY5MzAxOGQ5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MDU1MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjMDJhNTA0N2M2N2ZlZTEyNjBiZTM1NjA1NDI2NmViYTJlMGI3ZmFjODc1MGQ2OTA3ZTI0MDljZTY3ZDc2M2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.z5f4R9d1gra8TRbB-OTQ1yLysRHr0JKGRMO324pDCz0)
 
 ### Diagramme de Container
+
 ![Diagramme de container](https://private-user-images.githubusercontent.com/99349443/391997340-855fae5c-1849-4aab-999a-91fc920359a9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzUwNTAsIm5iZiI6MTczMzIzNDc1MCwicGF0aCI6Ii85OTM0OTQ0My8zOTE5OTczNDAtODU1ZmFlNWMtMTg0OS00YWFiLTk5OWEtOTFmYzkyMDM1OWE5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MDU1MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgzMjVkYmNiYWQyOTEzMmUzYmI2NjE1ZTAwZjExZWZlNjU3NmQxNzMyODkxYWZlMGZjMWY5Mzg3YzY0YjA0YzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.6-sbbECVIVlG64Cxvkzlx_OKfZ9Ih3Z0rT1d_Pez5XU)
 
 ### Diagramme de Composant
+
 ![Diagramme de composant](https://private-user-images.githubusercontent.com/99349443/391997344-c3577a6d-e939-49f2-961b-d28df93018d9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzUwNTAsIm5iZiI6MTczMzIzNDc1MCwicGF0aCI6Ii85OTM0OTQ0My8zOTE5OTczNDQtYzM1NzdhNmQtZTkzOS00OWYyLTk2MWItZDI4ZGY5MzAxOGQ5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MDU1MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjMDJhNTA0N2M2N2ZlZTEyNjBiZTM1NjA1NDI2NmViYTJlMGI3ZmFjODc1MGQ2OTA3ZTI0MDljZTY3ZDc2M2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.z5f4R9d1gra8TRbB-OTQ1yLysRHr0JKGRMO324pDCz0)
 
 ### Diagramme de Code
+
 ![Diagramme de code](https://private-user-images.githubusercontent.com/99349443/391997329-dd400baf-1b94-4a05-b286-6e64259c7ae6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzUwNTAsIm5iZiI6MTczMzIzNDc1MCwicGF0aCI6Ii85OTM0OTQ0My8zOTE5OTczMjktZGQ0MDBiYWYtMWI5NC00YTA1LWIyODYtNmU2NDI1OWM3YWU2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MDU1MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI5OGE0NTgyZmE5ZWU3ZTk4Y2U0Y2RjMDU3MDk3YzRjMjM5YmI1ZjZjMzU1MTM0NzgzMmUyYmNjMWE2NzY1NTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7G5V4ecxB4ZAQ4iwYjz-boGTKUyGH_9fHXK34mKIlnU)
 
 ## Choix de l'architecture logicielle
+
 ![Clean archi](https://private-user-images.githubusercontent.com/99349443/392001985-e5efbfec-8441-4132-84f5-da5e93d3a18f.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzU4NDAsIm5iZiI6MTczMzIzNTU0MCwicGF0aCI6Ii85OTM0OTQ0My8zOTIwMDE5ODUtZTVlZmJmZWMtODQ0MS00MTMyLTg0ZjUtZGE1ZTkzZDNhMThmLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MTkwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM1M2JmZWJiOTkyZjJmNWQ5MWQ5NGJlNWI1MTA4NGY3OGM2YWNiMTk2ZDhhNWRiMTNiNTY2MTFmYmI0MDM0MGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._zsV4npzDRwzaG8CIyXPllIK1IozsdOpTO8QcqOeZfo)
 
 ### Exemple 1
+
 ![exemple de clean archi](https://private-user-images.githubusercontent.com/99349443/392002751-f867e2be-7f7d-499f-9e3f-1d32640265f7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzMyMzU5NjcsIm5iZiI6MTczMzIzNTY2NywicGF0aCI6Ii85OTM0OTQ0My8zOTIwMDI3NTEtZjg2N2UyYmUtN2Y3ZC00OTlmLTllM2YtMWQzMjY0MDI2NWY3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjAzVDE0MjEwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVjNDFjZDE4OWU2ZGM3MWVhYmIwYjlhNTIyOWE4YmJhZGM1YzdmNWNkMmVmMDlkM2Q5ODdiYjgwMmNjYWVlMDImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gxdSKeFN1mX5LVAOq86WZnD9YjV5cLeIG3UGpRNAgm4)
 
 ### Exemple 2
@@ -54,6 +62,7 @@ Ces annonces sont des invitations à une entraide généralisée.
 ## Design Patterns
 
 ### Decorator Pattern
+
 <u>Définition RefactoringGuru :</u>  
 Décorateur est un patron de conception structurel qui permet d’affecter dynamiquement de nouveaux comportements à des objets en les plaçant dans des emballeurs qui implémentent ces comportements.
 
@@ -63,6 +72,7 @@ Décorateur est un patron de conception structurel qui permet d’affecter dynam
 Dans ce cas précis, nous venons surcharger la méthode getAll() afin de créer une route GET qui nous renvoira la donnée retournée par la méthode.
 
 ### Singleton Pattern
+
 <u>Définition RefactoringGuru :</u>  
 Singleton est un patron de conception de création qui garantit que l’instance d’une classe n’existe qu’en un seul exemplaire, tout en fournissant un point d’accès global à cette instance.
 
@@ -71,12 +81,9 @@ Singleton est un patron de conception de création qui garantit que l’instance
 <u>Explications :</u>  
 La première ligne de code '@Injectable' (qui correspond au Decorator Pattern) permet de rendre cette classe instanciable qu'une seule fois.
 
-
-A partir de ce moment, plus aucune nouvelle instance ne pourra être crée, on ne pourra donc que passer par l'instance déjà créée de cette classe. 
-
+A partir de ce moment, plus aucune nouvelle instance ne pourra être crée, on ne pourra donc que passer par l'instance déjà créée de cette classe.
 
 Dans ce cas là, le service utilisé pour la gestion de la base de données est un singleton afin de cadrer son utilisateur et d'éliminer les erreurs potentielles qu'elle pourrait rencontrer si elle était instanciée plusieurs fois.
-
 
 ## Prérequis
 
@@ -97,24 +104,26 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
    git clone https://github.com/MatisGalvin/api-architecture-logicielle.git
    ```
 
-2. Installez les dépendances :
-
-   ```bash
-   npm install
-   ```
-
 ## Lancer le projet
 
-Dans le répertoire de l'application
+Dans le répertoire de l'application (les nodes modules seront installés à cette étape automatiquement. Supprimer votre dossier node modules si vous aviez installé les dépendences pour eviter tout conflits).
+
 ```bash
 docker compose up -d
-npm run start:dev
 ```
 
 ## Lancer les tests
 
-To run tests, run the following command
+Pour lancer les tests, executer cette commande.
 
 ```bash
-  npm run test
+  docker compose exec app npm run test
+```
+
+## Lancer le test coverage
+
+Pour lancer le test coverage, executer cette commande.
+
+```bash
+  docker compose exec app npm run test:cov
 ```
