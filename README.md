@@ -61,6 +61,14 @@ Ces annonces sont des invitations à une entraide généralisée.
 
 ## Design Patterns
 
+Les designs patterns suivants ont principalement été utilisés afin de respecter les bonnes pratiques dictées par la documentation du framework NestJs.
+
+Il serait potentiellement dangereux de beaucoup dévier des bonnes pratiques et d'être victime d'un projet très rapidement non maintenable.
+
+Afin de faire une analyse sur les choix techniques, il est bon de rappeler l'utilité de ce graphique, la matrice de risques, qui permet de pondérer les risques encourus lors d'une décision.
+
+![matrice de risques](https://private-user-images.githubusercontent.com/147709815/395179577-1d8a4cee-a393-45c6-be86-e0ea55905b60.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQwMTA1MjcsIm5iZiI6MTczNDAxMDIyNywicGF0aCI6Ii8xNDc3MDk4MTUvMzk1MTc5NTc3LTFkOGE0Y2VlLWEzOTMtNDVjNi1iZTg2LWUwZWE1NTkwNWI2MC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIxMlQxMzMwMjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZWE0NjBjM2Q5YzVmMzZhNTk0ZDM0Yjk1ZmZiYjRjNWIwNmU2N2JiM2ZiNTg1MjkyYWJlY2U5N2MzN2I5MWU2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Rj-sQRbRTbLjlFP1TnReAxrHhijy8m6mTOw8M84Y8BI)
+
 ### Decorator Pattern
 
 <u>Définition RefactoringGuru :</u>  
@@ -84,6 +92,19 @@ La première ligne de code '@Injectable' (qui correspond au Decorator Pattern) p
 A partir de ce moment, plus aucune nouvelle instance ne pourra être crée, on ne pourra donc que passer par l'instance déjà créée de cette classe.
 
 Dans ce cas là, le service utilisé pour la gestion de la base de données est un singleton afin de cadrer son utilisateur et d'éliminer les erreurs potentielles qu'elle pourrait rencontrer si elle était instanciée plusieurs fois.
+
+### Dependency Injection Pattern
+
+<u>Définition :</u>  
+L'injection de dépendances consiste à créer dynamiquement (injecter) les dépendances entre les différents objets en s'appuyant sur une description (fichier de configuration ou métadonnées) ou de manière programmatique. Ainsi les dépendances entre composants logiciels ne sont plus exprimées dans le code de manière statique mais déterminées dynamiquement à l'exécution.
+
+![dependecy injection pattern](https://private-user-images.githubusercontent.com/147709815/395178141-faac9e20-d839-4714-acb1-6ac27d79aa0d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQwMTAyNjcsIm5iZiI6MTczNDAwOTk2NywicGF0aCI6Ii8xNDc3MDk4MTUvMzk1MTc4MTQxLWZhYWM5ZTIwLWQ4MzktNDcxNC1hY2IxLTZhYzI3ZDc5YWEwZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIxMlQxMzI2MDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYWM3NGJmMjk2MzIzNzcwNTMzY2VhODM1ZTcyYjE3NjkwODRiZGY1MjI0YzZmNjc2YTdmNWZlZDBhNGI4ZmEyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.GjGt638PL9rHMzcTlhelwiRGS2OJaeCNbPMysJiGTpE)
+
+<u>Explications :</u>  
+L'injection de dépendances nous permet d'injecter des classes à une autre classe afin de la construire dynamiquement.
+
+Cela nous permet ainsi d'appeler la classe directement avec les paramètre dans son constructeur au lieu de créer l'instance puis d'y mapper les classes nécessaires.
+Cela permet également de la bonne construction de la classe puisqu'elle aura toutes les dépendances nécessaires à son bon fonctionnement.
 
 ## Prérequis
 
@@ -110,6 +131,13 @@ Dans le répertoire de l'application (les nodes modules seront installés à cet
 
 ```bash
 docker compose up -d
+```
+
+## Documentation swagger
+
+Permet d'accèder à la documentation (si et seulement si les containers sont correctement lancés comme le demande l'étape précédente) des différentes routes de l'api et de vérifier les données nécessaires en entrée.
+```bash
+localhost:3000/api
 ```
 
 ## Lancer les tests
